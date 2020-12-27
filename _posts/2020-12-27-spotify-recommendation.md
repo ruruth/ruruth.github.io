@@ -1,6 +1,7 @@
 ---
 published: true
 ---
+_This is a coursework of Business Communication Course_<hr>
 _The music streaming industry is highly competitive and for Spotify to keep its number one position in terms of subscribers, it must innovate on a constant basis. Needless to say, Spotify has arrived at this position primarily due to its business strategy and technical tools and can only remain there by constantly evolving._<br>
 
 ## Why the Need for a Change<br>
