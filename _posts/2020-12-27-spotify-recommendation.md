@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-The music streaming industry is highly competitive and for Spotify to keep its number one position in terms of subscribers, it must innovate on a constant basis. Needless to say, Spotify has arrived at this position primarily due to its business strategy and technical tools and can only remain there by constantly evolving.<br>
+_The music streaming industry is highly competitive and for Spotify to keep its number one position in terms of subscribers, it must innovate on a constant basis. Needless to say, Spotify has arrived at this position primarily due to its business strategy and technical tools and can only remain there by constantly evolving._<br>
 
 ## Why the Need for a Change<br>
 Our objective is to sell to Spotify, a project pertaining to the improvement of the recommendation engine they currently use in order to enhance the user’s chances of discovering new musical tastes. <br>
