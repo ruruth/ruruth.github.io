@@ -2,7 +2,7 @@
 published: true
 ---
 _This is part of a coursework of Communications and Ethics for Business Analytics I took this semester._<br>
-***<br>
+***
 The music streaming industry is highly competitive and for Spotify to keep its number one position in terms of subscribers, it must innovate on a constant basis. Needless to say, Spotify has arrived at this position primarily due to its business strategy and technical tools and can only remain there by constantly evolving.<br>
 ## Why the Need for a Change<br>
 [Changing Their Tune: How Consumers' Adoption of Online Streaming Affects Music Consumption and Discovery](https://pubsonline.informs.org/doi/10.1287/mksc.2017.1051) finds that, when users can listen to any song on Spotify without having to pay, except through their time, the number of plays grows by 132% and the number of unique artists heard increases by 62%. Even in the long run, after about 25 weeks, the increments are still 49% and 32% respectively. The article also finds that most of the additional music is only listened to once, which implies that users end up trying things they do not like when they get more venturesome and find new likes during the process. This article shows that, if freed of economic limits on consumption, users tend to listen to more music and more varieties. It also shows that users tend to listen to the same thing less often in the experiment. This result supports our recommendation that even those listeners who do not actively look for new songs, may also have the desire to try new songs and to expand their taste.<br><br>
