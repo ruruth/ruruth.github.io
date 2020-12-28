@@ -2,7 +2,7 @@
 published: true
 ---
 _This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python._<br>
----------<br>
+----<br>
 I want to get name, address, number of bedrooms and price of each apartment which is listed on the first five pages of the website [https://www.apartmenthomeliving.com/new-york-city-ny?page=](https://www.apartmenthomeliving.com/new-york-city-ny?page=) and use DataFrame to represent a table of data with rows and columns. Then, output as a csv file.<br><br>
 The difference in url of each page is only at the **page=**<br>
 [![url.png]({{site.baseurl}}/images/url.png)]({{site.baseurl}}/images/url.png)<br><br>
