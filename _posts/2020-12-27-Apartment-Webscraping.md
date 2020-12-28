@@ -2,6 +2,7 @@
 published: true
 ---
 _This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python._<br><br>
+
 {% highlight python linenos %}
     import webbrowser
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny')
@@ -9,7 +10,6 @@ _This is part of a coursework of Programming for Business Analytics I took this 
 {% endhighlight %}
 
 {% highlight python linenos %}
-    
     import requests
     # The requests module allows you to send HTTP requests using Python.
     # The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
@@ -21,7 +21,6 @@ _This is part of a coursework of Programming for Business Analytics I took this 
     import pandas as pd
     # Pandas is built on the Numpy package and its key data structure is called the DataFrame.
     # DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
-    
     
     
     headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
@@ -76,6 +75,5 @@ _This is part of a coursework of Programming for Business Analytics I took this 
         # Append the DataFrame of page i to house
   
     house.to_csv('output.csv', mode='w')
-    # Output a csv file.
-    
+    # Output a csv file. 
 {% endhighlight %}
