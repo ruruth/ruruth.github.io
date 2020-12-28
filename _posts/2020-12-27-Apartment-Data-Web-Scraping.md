@@ -16,7 +16,7 @@ I look for number of bedrooms by `class=`**`"bedrooms"`**<br>
 [![bedrooms.png]({{site.baseurl}}/images/bedrooms.png)]({{site.baseurl}}/images/bedrooms.png)<br>
 I look for prices by `class=`**`"prices"`**<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
-## Code<br>
+### Code<br>
 {% highlight python linenos %}
     import webbrowser
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
