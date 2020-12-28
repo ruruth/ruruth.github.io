@@ -62,21 +62,19 @@ On each page, under `<div id=`**`"property_list"`**`>`, contains all names, addr
         posts = soup.find(id = "property_list")
         # The value of the id attribute must be unique within the HTML document.
     
-        name_tags = posts.select(".property_link")
-        name = [nt.get_text() for nt in name_tags]
+        name_class = posts.select(".property_link")
+        # Soup.select method to look for all contents of class="property_link"
+        name = [nt.get_text() for nt in name_class]
         # Find all name on page i at one time.
     
-        address_tags = posts.select(".address")
-        address = [at.get_text() for at in address_tags]
-        # Find all address on page i at one time.
-    
-        beds_tags = posts.select(".bedrooms")
-        beds = [pt.get_text() for pt in beds_tags]
-        # Find all beds of the page i at one time.
+        address_class = posts.select(".address")
+        address = [at.get_text() for at in address_class]
 
-        price_tags = posts.select(".prices")
-        price = [pt.get_text() for pt in price_tags]
-        # Find all price of the page i at one time..
+        beds_class = posts.select(".bedrooms")
+        beds = [pt.get_text() for pt in beds_class]
+
+        price_class = posts.select(".prices")
+        price = [pt.get_text() for pt in price_class]
     
         df = pd.DataFrame({
             "name":name,
