@@ -19,8 +19,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 # Pandas is built on the Numpy package and its key data structure is called the DataFrame.
 # DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
-{% endhighlight %}<br><br>
-{% highlight python linenos %}
+
 headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
 # The User-Agent request header is a characteristic string that lets servers and network peers 
 # identify the application, operating system, vendor, and/or version of the requesting user agent.
@@ -74,7 +73,4 @@ for i in range (1,5):
   
 house.to_csv('output.csv', mode='w')
 # Output a csv file.
-
-{% endhighlight %}
-
-
+{% endhighlight %}<br><br>
