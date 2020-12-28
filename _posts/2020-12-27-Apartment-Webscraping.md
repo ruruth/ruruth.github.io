@@ -18,7 +18,6 @@ On each page, under `<div id=`**`"property_list"`**`>`, contains all names, addr
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 <br><br>
 ## Code<br>
-### Code<br>
 {% highlight python linenos %}
     import webbrowser
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
