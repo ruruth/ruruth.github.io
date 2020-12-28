@@ -6,7 +6,7 @@ _This is part of a coursework of Programming for Business Analytics I took this 
 I want to get name, address, number of bedrooms and price of each apartment which is listed on the first five pages of the website [https://www.apartmenthomeliving.com/new-york-city-ny?page=](https://www.apartmenthomeliving.com/new-york-city-ny?page=) and use DataFrame to represent a table of data with rows and columns. Then, output as a csv file.<br><br>
 The difference in url of each page is only at the **page=**<br>
 [![url.png]({{site.baseurl}}/images/url.png)]({{site.baseurl}}/images/url.png)<br><br>
-On each page, under <div id=**"property_list"**/>, contains all names, addresses, number of bedrooms and prices of each property of that page I want.<br>
+On each page, under <div id=**"property_list"**\>, contains all names, addresses, number of bedrooms and prices of each property of that page I want.<br>
 [![property_list.png]({{site.baseurl}}/images/property_list.png)]({{site.baseurl}}/images/property_list.png)<br>
 <br>
 <br>
