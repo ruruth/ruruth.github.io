@@ -8,7 +8,8 @@ _This is part of a coursework of Programming for Business Analytics I took this 
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny')
     # Open the webpage that we are going to scrape.
     
-{% endhighlight %}<br><br>
+{% endhighlight %}
+
 {% highlight python linenos %}
 
     import requests
@@ -49,7 +50,7 @@ _This is part of a coursework of Programming for Business Analytics I took this 
         posts = soup.find(id = "property_list")
         # The value of the id attribute must be unique within the HTML document.
     
-        name_tags = posts.select(".property_name")
+        name_tags = posts.select(".property_link")
         name = [nt.get_text() for nt in name_tags]
         # Find all name on page i at one time.
     
@@ -79,4 +80,4 @@ _This is part of a coursework of Programming for Business Analytics I took this 
     house.to_csv('output.csv', mode='w')
     # Output a csv file.
     
-{% endhighlight %}<br><br>
+{% endhighlight %}
