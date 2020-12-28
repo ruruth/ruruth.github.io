@@ -1,6 +1,13 @@
 ---
 published: true
 ---
+<style>
+   img {
+       display: block;
+       margin: auto;
+   }
+</style>
+
 _This is part of a coursework of Communications and Ethics for Business Analytics I took this semester._<br>
 --------<br>
 The music streaming industry is highly competitive and for Spotify to keep its number one position in terms of subscribers, it must innovate on a constant basis. Needless to say, Spotify has arrived at this position primarily due to its business strategy and technical tools and can only remain there by constantly evolving.<br>
