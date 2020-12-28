@@ -8,13 +8,13 @@ The difference in url of each page is only at the **page=**<br>
 [![url.png]({{site.baseurl}}/images/url.png)]({{site.baseurl}}/images/url.png)<br><br>
 On each page, under `<div id=`**`"property_list"`**`>`, contains all names, addresses, number of bedrooms and prices of each property of that page I want.<br>
 [![property_list.png]({{site.baseurl}}/images/property_list.png)]({{site.baseurl}}/images/property_list.png)<br>
-I look for property name by `class=`**`"property_link"`**`<br>
+I look for property name by `class=`**"property_link"**`<br>
 [![property_link.png]({{site.baseurl}}/images/property_link.png)]({{site.baseurl}}/images/property_link.png)<br>
-I look for property address by `class=`**`"address"`**`<br>
+I look for property address by `class=`**"address"**`<br>
 [![address.png]({{site.baseurl}}/images/address.png)]({{site.baseurl}}/images/address.png)<br>
-I look for number of bedrooms by `class=`**`"bedrooms"`**`<br>
+I look for number of bedrooms by `class=`**"bedrooms"**`<br>
 [![bedrooms.png]({{site.baseurl}}/images/bedrooms.png)]({{site.baseurl}}/images/bedrooms.png)<br>
-I look for prices by `class=`**`"prices"`**`<br>
+I look for prices by `class=`**"prices"**`<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 ## Code<br>
 {% highlight python linenos %}
