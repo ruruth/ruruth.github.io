@@ -9,7 +9,7 @@ The difference in url of each page is only at the **page=**<br>
 On each page, under <div id\=**"property_list"**>, contains all names, addresses, number of bedrooms and prices of each property of that page I want.<br>
 [![property_list.png]({{site.baseurl}}/images/property_list.png)]({{site.baseurl}}/images/property_list.png)<br>
 <br>
-<br>
+[![property_link.png]({{site.baseurl}}/images/property_link.png)]({{site.baseurl}}/images/property_link.png)<br>
 <br>
 <br>
 <br>
