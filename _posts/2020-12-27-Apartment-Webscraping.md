@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-_This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python_<br>
+_This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python._<br>
 ***<br>
 `import webbrowser`<br>
 `webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny')`<br>
