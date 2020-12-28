@@ -11,8 +11,11 @@ On each page, under <div id\=**"property_list"**>, contains all names, addresses
 <br>
 [![property_link.png]({{site.baseurl}}/images/property_link.png)]({{site.baseurl}}/images/property_link.png)<br>
 <br>
+[![address.png]({{site.baseurl}}/images/address.png)]({{site.baseurl}}/images/address.png)<br>
 <br>
+[![bedrooms.png]({{site.baseurl}}/images/bedrooms.png)]({{site.baseurl}}/images/bedrooms.png)<br>
 <br>
+[![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 <br><br>
 {% highlight python linenos %}
     import webbrowser
