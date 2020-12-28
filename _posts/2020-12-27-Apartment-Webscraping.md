@@ -2,11 +2,11 @@
 published: true
 ---
 _This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python._<br><br>
-I want to get **name**, **address**, **number of bedrooms** and **price** of each apartment listed on the website page.<br>
+I want to get **name**, **address**, **number of bedrooms** and **price** of each apartment which is listed on the website .<br>
 Therefore, I check the html code of the website to find out the .<br>
 {% highlight python linenos %}
     import webbrowser
-    webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny')
+    webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
     # Open the webpage that we are going to scrape.
 {% endhighlight %}
 
