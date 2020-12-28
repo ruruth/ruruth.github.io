@@ -70,7 +70,7 @@ _This is part of a coursework of Programming for Business Analytics I took this 
             "address":address,
             "beds":beds,
             "price":price
-        })
+            })
         # Converts lists to DataFrame.
     
         house = house.append(df, ignore_index=True)
