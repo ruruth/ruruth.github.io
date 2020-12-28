@@ -1,20 +1,20 @@
 ---
 published: true
 ---
-> This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python.<br>
+_This is part of a coursework of Programming for Business Analytics I took this semester. The programming language is Python._<br>
 ---------<br>
 I want to get name, address, number of bedrooms and price of each apartment which is listed on the first five pages of the website [https://www.apartmenthomeliving.com/new-york-city-ny?page=](https://www.apartmenthomeliving.com/new-york-city-ny?page=) and use DataFrame to represent a table of data with rows and columns. Then, output as a csv file.<br><br>
 The difference in url of each page is only at the **page=**<br>
 [![url.png]({{site.baseurl}}/images/url.png)]({{site.baseurl}}/images/url.png)<br><br>
 On each page, under `<div id=`**`"property_list"`**`>`, contains all names, addresses, number of bedrooms and prices of each property of that page I want.<br>
 [![property_list.png]({{site.baseurl}}/images/property_list.png)]({{site.baseurl}}/images/property_list.png)<br>
-I look for property name by `class=**"property_link"**`<br>
+I look for property name by `class=`**`"property_link"`**`<br>
 [![property_link.png]({{site.baseurl}}/images/property_link.png)]({{site.baseurl}}/images/property_link.png)<br>
-I look for property address by `class=**"address"**`<br>
+I look for property address by `class=`**`"address"`**`<br>
 [![address.png]({{site.baseurl}}/images/address.png)]({{site.baseurl}}/images/address.png)<br>
-I look for number of bedrooms by `class=**"bedrooms"**`<br>
+I look for number of bedrooms by `class=`**`"bedrooms"`**`<br>
 [![bedrooms.png]({{site.baseurl}}/images/bedrooms.png)]({{site.baseurl}}/images/bedrooms.png)<br>
-I look for prices by `class=**"prices"**`<br>
+I look for prices by `class=`**`"prices"`**`<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 ## Code<br>
 {% highlight python linenos %}
