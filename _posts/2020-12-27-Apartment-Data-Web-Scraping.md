@@ -63,7 +63,7 @@ I look for prices by `class=`**`"prices"`**<br>
         # To get or retrieve data from the link, and send out the header to the website.
     
         soup = BeautifulSoup(page.content, 'html.parser')
-        # Use BeautifulSoup to creates a parse tree.
+        # Use BeautifulSoup to create a parse tree.
     
         posts = soup.find(id = "property_list")
         # The value of the id attribute must be unique within the HTML document.
