@@ -24,7 +24,7 @@ I look for number of bedrooms by `class=`**`"bedrooms"`**<br>
 I look for prices by `class=`**`"prices"`**<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 ### Code<br>
-```
+```python
     import webbrowser
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
     # Open the webpage that we are going to scrape.
