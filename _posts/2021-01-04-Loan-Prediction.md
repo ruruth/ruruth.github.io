@@ -3,7 +3,9 @@ published: true
 ---
 _This practice problem is from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/#About). The programming language is Python._<br>
 ---------<br>
-### Dataset Information
+
+
+> ### Predict Loan Eligibility for Dream Housing Finance company
 
 > Dream Housing Finance company deals in all kinds of home loans. They have presence across all urban, semi urban and rural areas. Customer first applies for home loan and after that company validates the customer eligibility for loan.
 
