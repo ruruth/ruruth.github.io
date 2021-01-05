@@ -325,10 +325,37 @@ df_nonlog.head()
 df_nonlog.shape
 {% endhighlight %}
 
+### Preparation for Train-Test Split
+
+{% highlight python %}
+# Logistic Regression
+# specify input and output attributes
+X = df.drop(columns=['Loan_Status'], axis=1)
+# drop the Loan_Status from independent columns
+y = df['Loan_Status']
+{% endhighlight %}
+
+{% highlight python %}
+# Decision Tree and Random Forest
+# specify input and output attributes
+X_nonlog = df_nonlog.drop(columns=['Loan_Status'], axis=1)
+# drop the Loan_Status from independent columns
+y_nonlog = df_nonlog['Loan_Status']
+{% endhighlight %}
+
+### Hyperparameter Tuning (Grid Search)
+I took [Jason Brownlee](https://machinelearningmastery.com/hyperparameters-for-classification-machine-learning-algorithms/)'s code for reference and modify the code to become mine.
+
 {% highlight python %}
 df_all = df
 {% endhighlight %}
 
+{% highlight python %}
+df_all = df
+{% endhighlight %}
 
+{% highlight python %}
+df_all = df
+{% endhighlight %}
 
 
