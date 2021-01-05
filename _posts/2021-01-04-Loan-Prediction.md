@@ -8,24 +8,6 @@ Dream Housing Finance company deals in all kinds of home loans. They have presen
 Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others. To automate this process, they have provided a dataset to identify the customers segments that are eligible for loan amount so that they can specifically target these customers.<br>
 ### Dataset Information
 **Train file:** CSV containing the customers for whom loan eligibility is known as 'Loan_Status'<br>
-
-| Variable | Description |
-| ----------: | --------------: |
-| LoanID | Unique Loan ID |
-| Gender | Male/ Female |
-| Married | Applicant married (Y/N) |
-| Dependents | Number of dependents |
-| Education | Applicant Education (Graduate/ Under Graduate) |
-| SelfEmployed | Self employed (Y/N) |
-| ApplicantIncome | Applicant income |
-| CoapplicantIncome | Coapplicant income |
-| LoanAmount | Loan amount in thousands |
-| LoanAmountTerm | Term of loan in months |
-| CreditHistory | credit history meets guidelines |
-| PropertyArea | Urban/ Semi Urban/ Rural |
-| LoanStatus | Loan approved (Y/N) |
-{:.table-striped}
-
 <table style="border: none;border-collapse: collapse;width:437pt;">
     <tbody>
         <tr>
