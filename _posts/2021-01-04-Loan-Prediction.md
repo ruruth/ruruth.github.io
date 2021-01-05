@@ -70,8 +70,47 @@ Company wants to automate the loan eligibility process (real time) based on cust
 </table>
 
 ### Code<br>
+### Import Modules
+
 {% highlight python %}
-    [code]
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import itertools
+
+from matplotlib import pyplot as plt
+import matplotlib
+%matplotlib inline
+import warnings
+warnings.filterwarnings('ignore')
+
+### Label Encoding
+from sklearn.preprocessing import LabelEncoder
+
+### Hyperparameter Tuning
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import RepeatedStratifiedKFold
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+
+### ROC curves
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_auc_score
+
+### Precision-Recall curve and F1 score
+from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import f1_score
+from sklearn.metrics import auc
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+
+### Confusion Matrix
+from sklearn.metrics import confusion_matrix
+
 {% endhighlight %}
 
 
