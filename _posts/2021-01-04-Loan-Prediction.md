@@ -260,4 +260,75 @@ df.head()
 After logs are applied, the ranges are similar. Hence we do not further scale data between 0 and 1.<br>
 ### Correlation Matrix
 
+{% highlight python %}
+corr = df.corr()
+plt.figure(figsize=(15,10))
+sns.heatmap(corr, annot = True, cmap="BuPu")
+{% endhighlight %}
+
+### Attributes for Logistic Regression
+
+{% highlight python %}
+df_all = df
+{% endhighlight %}
+
+{% highlight python %}
+# drop unnecessary columns
+cols = ['ApplicantIncome', 'CoapplicantIncome', "LoanAmount", "Loan_Amount_Term", "Total_Income", 'Loan_ID', 'CoapplicantIncomeLog']
+# drop 'CoapplicantIncomeLog' because it has infinitive value.
+df = df.drop(columns=cols, axis=1)
+# axis=1 drops the column entirely.
+df
+{% endhighlight %}
+
+### Attributes for Decision Tree and Random Forest
+
+{% highlight python %}
+# Select attributes which are not applied logarithm to
+df_nonlog = df_all[['Gender','Married','Dependents', 'Education', 'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', "LoanAmount", "Loan_Amount_Term", "Credit_History", "Property_Area", "Loan_Status", "Total_Income"]]
+df_nonlog
+{% endhighlight %}
+
+### Label Encoding
+
+{% highlight python %}
+# for Logistic Regression
+
+cols = ['Gender',"Married","Education",'Self_Employed',"Property_Area","Loan_Status","Dependents"]
+le = LabelEncoder()
+# initialize the LabelEncoder
+
+for col in cols:
+    df[col] = le.fit_transform(df[col])
+{% endhighlight %}
+
+{% highlight python %}
+df.shape
+{% endhighlight %}
+
+{% highlight python %}
+# for Decision Tree and Random Forest
+
+cols = ['Gender',"Married", "Dependents","Education",'Self_Employed',"Property_Area","Loan_Status"]
+le = LabelEncoder()
+# initialize the LabelEncoder
+
+for col in cols:
+    df_nonlog[col] = le.fit_transform(df_nonlog[col])
+{% endhighlight %}
+
+{% highlight python %}
+df_nonlog.head()
+{% endhighlight %}
+
+{% highlight python %}
+df_nonlog.shape
+{% endhighlight %}
+
+{% highlight python %}
+df_all = df
+{% endhighlight %}
+
+
+
 
