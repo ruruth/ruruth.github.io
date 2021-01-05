@@ -119,7 +119,6 @@ from sklearn.metrics import confusion_matrix
 
 {% endhighlight %}
 
-
 ### Loading the Dataset
 
 {% highlight python %}
