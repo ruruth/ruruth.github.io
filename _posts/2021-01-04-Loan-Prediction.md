@@ -87,3 +87,9 @@ Company wants to automate the loan eligibility process (real time) based on cust
     </tbody>
 </table>
 
+### Code<br>
+{% highlight python %}
+    [code]
+{% endhighlight %}
+
+
