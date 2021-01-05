@@ -126,9 +126,138 @@ df = pd.read_csv("Loan Prediction Dataset.csv")
 df.head()
 {% endhighlight %}
 
-### Loading the Dataset
+{% highlight python %}
+df.describe()
+{% endhighlight %}
 
 {% highlight python %}
-df = pd.read_csv("Loan Prediction Dataset.csv")
+df.info()
+{% endhighlight %}
+
+### Preprocessing the Dataset
+
+{% highlight python %}
+# find the null values
+df.isnull().sum()
+{% endhighlight %}
+
+{% highlight python %}
+# Fill the missing values for numerical terms - mean.
+# Mean vs median (better to choose median).
+# Nether mean nor median is usable if the null value is more than 5%.
+# If more than 5%, change the numerical into categorical.
+# Imputing 
+df['LoanAmount'] = df['LoanAmount'].fillna(df['LoanAmount'].mean())
+df['Loan_Amount_Term'] = df['Loan_Amount_Term'].fillna(df['Loan_Amount_Term'].mean())
+df['Credit_History'] = df['Credit_History'].fillna(df['Credit_History'].mean())
+{% endhighlight %}
+
+{% highlight python %}
+# Fill the missing values for categorical terms - mode
+df['Gender'] = df["Gender"].fillna(df['Gender'].mode()[0])
+df['Married'] = df["Married"].fillna(df['Married'].mode()[0])
+df['Dependents'] = df["Dependents"].fillna(df['Dependents'].mode()[0])
+df['Self_Employed'] = df["Self_Employed"].fillna(df['Self_Employed'].mode()[0])
+{% endhighlight %}
+
+{% highlight python %}
+df.isnull().sum()
+{% endhighlight %}
+
+### Exploratory Data Analysis
+
+{% highlight python %}
+# categorical attributes visualization
+sns.countplot(df['Gender'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Married'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Dependents'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Education'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Self_Employed'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Property_Area'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.countplot(df['Loan_Status'])
+{% endhighlight %}
+
+{% highlight python %}
+# numerical attributes visualization
+sns.distplot(df["ApplicantIncome"])
+{% endhighlight %}
+
+{% highlight python %}
+sns.distplot(df["CoapplicantIncome"])
+{% endhighlight %}
+
+{% highlight python %}
+sns.distplot(df["LoanAmount"])
+{% endhighlight %}
+
+{% highlight python %}
+sns.distplot(df['Loan_Amount_Term'])
+{% endhighlight %}
+
+{% highlight python %}
+sns.distplot(df['Credit_History'])
+# The value has already in a range of 0 to 1.
+# Will not apply Log Transformation.
+{% endhighlight %}
+
+### Creation of New Attributes
+
+{% highlight python %}
+# Total income
+df['Total_Income'] = df['ApplicantIncome'] + df['CoapplicantIncome']
 df.head()
 {% endhighlight %}
+
+### Log Transformation
+
+{% highlight python %}
+# apply log transformation to the attribute
+df['ApplicantIncomeLog'] = np.log(df['ApplicantIncome'])
+sns.distplot(df["ApplicantIncomeLog"])
+# ApplicationIncomeLog ranges between 5 to 12.
+{% endhighlight %}
+
+{% highlight python %}
+df['LoanAmountLog'] = np.log(df['LoanAmount'])
+sns.distplot(df["LoanAmountLog"])
+{% endhighlight %}
+
+{% highlight python %}
+df['Loan_Amount_Term_Log'] = np.log(df['Loan_Amount_Term'])
+sns.distplot(df["Loan_Amount_Term_Log"])
+# Most of the values are at 6.
+# But the scale is changed from 0 to 500 to 0 to 6 which is still better than before log transformation.
+{% endhighlight %}
+
+{% highlight python %}
+df['Total_Income_Log'] = np.log(df['Total_Income'])
+sns.distplot(df["Total_Income_Log"])
+{% endhighlight %}
+
+{% highlight python %}
+df.head()
+{% endhighlight %}
+
+### Feature Scalling
+After logs are applied, the ranges are similar. Hence we do not further scale data between 0 and 1.<br>
+### Correlation Matrix
+
+
