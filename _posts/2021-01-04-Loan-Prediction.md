@@ -25,6 +25,12 @@ Company wants to automate the loan eligibility process (real time) based on cust
 | LoanStatus | Loan approved (Y/N) |_
 </table>
 
-
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
 
 
