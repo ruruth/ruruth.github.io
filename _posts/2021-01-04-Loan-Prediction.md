@@ -1,6 +1,13 @@
 ---
 published: true
 ---
+<style>
+   img {
+       display: block;
+       margin: auto;
+   }
+</style>
+
 _This practice problem is from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/#About). The programming language is Python._<br>
 ---------<br>
 ### Predict Loan Eligibility for Dream Housing Finance company<br>
@@ -126,4 +133,3 @@ df.head()
 df = pd.read_csv("Loan Prediction Dataset.csv")
 df.head()
 {% endhighlight %}
-
