@@ -14,7 +14,7 @@ Company wants to automate the loan eligibility process (real time) based on cust
 | Gender | Male/ Female |
 | Married | Applicant married (Y/N) |
 | Dependents | Number of dependents |
-| Education | Applicant Education (Graduate/ Under Graduate)     |
+| Education | Applicant Education (Graduate/ Under Graduate) |
 | SelfEmployed | Self employed (Y/N) |
 | ApplicantIncome | Applicant income |
 | CoapplicantIncome | Coapplicant income |
