@@ -23,7 +23,7 @@ Company wants to automate the loan eligibility process (real time) based on cust
 | CreditHistory | credit history meets guidelines |
 | PropertyArea | Urban/ Semi Urban/ Rural |
 | LoanStatus | Loan approved (Y/N) |
-
+{:.mbtablestyle}
 
 
 
