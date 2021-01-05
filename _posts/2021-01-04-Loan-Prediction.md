@@ -69,7 +69,6 @@ Company wants to automate the loan eligibility process (real time) based on cust
     </tbody>
 </table>
 
-### Code<br>
 ### Import Modules
 
 {% highlight python %}
@@ -111,4 +110,12 @@ from sklearn.metrics import recall_score
 ### Confusion Matrix
 from sklearn.metrics import confusion_matrix
 
+{% endhighlight %}
+
+
+### Loading the Dataset
+
+{% highlight python %}
+df = pd.read_csv("Loan Prediction Dataset.csv")
+df.head()
 {% endhighlight %}
