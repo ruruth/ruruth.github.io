@@ -112,5 +112,3 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import confusion_matrix
 
 {% endhighlight %}
-
-
