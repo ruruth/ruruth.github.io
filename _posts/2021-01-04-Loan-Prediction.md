@@ -10,7 +10,7 @@ Company wants to automate the loan eligibility process (real time) based on cust
 **Train file:** CSV containing the customers for whom loan eligibility is known as 'Loan_Status'<br>
 
 | Variable | Description |
-|----------:|--------------:|
+| ----------: |--------------: |
 | LoanID | Unique Loan ID |
 | Gender | Male/ Female |
 | Married | Applicant married (Y/N) |
