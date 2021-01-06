@@ -293,7 +293,7 @@ df_nonlog
 ### Label Encoding
 
 {% highlight python %}
-### for Logistic Regression
+# for Logistic Regression
 
 cols = ['Gender',"Married","Education",'Self_Employed',"Property_Area","Loan_Status","Dependents"]
 le = LabelEncoder()
