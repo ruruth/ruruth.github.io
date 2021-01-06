@@ -128,6 +128,124 @@ df = pd.read_csv("Loan Prediction Dataset.csv")
 df.head()
 {% endhighlight %}
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Loan_ID</th>
+      <th>Gender</th>
+      <th>Married</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>Self_Employed</th>
+      <th>ApplicantIncome</th>
+      <th>CoapplicantIncome</th>
+      <th>LoanAmount</th>
+      <th>Loan_Amount_Term</th>
+      <th>Credit_History</th>
+      <th>Property_Area</th>
+      <th>Loan_Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>LP001002</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5849</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LP001003</td>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4583</td>
+      <td>1508.0</td>
+      <td>128.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LP001005</td>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>3000</td>
+      <td>0.0</td>
+      <td>66.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>LP001006</td>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2583</td>
+      <td>2358.0</td>
+      <td>120.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>LP001008</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>6000</td>
+      <td>0.0</td>
+      <td>141.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 {% highlight python %}
 df.describe()
 {% endhighlight %}
