@@ -666,6 +666,8 @@ print(cm)
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
 
+[![Loan-Prediction-18-ConfusionMatrix_LR.png]({{site.baseurl}}/images/Loan-Prediction-18-ConfusionMatrix_LR.png)]({{site.baseurl}}/images/Loan-Prediction-18-ConfusionMatrix_LR.png)
+
 {% highlight python %}
 # Decision Tree Confusion Matrix
 
@@ -680,6 +682,8 @@ print(cm)
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
 
+[![Loan-Prediction-19-ConfusionMatrix_DT.png]({{site.baseurl}}/images/Loan-Prediction-19-ConfusionMatrix_DT.png)]({{site.baseurl}}/images/Loan-Prediction-19-ConfusionMatrix_DT.png)
+
 {% highlight python %}
 # Random Forest Confusion Matrix
 
@@ -693,6 +697,8 @@ print(cm)
 
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
+
+[![Loan-Prediction-20-ConfusionMatrix_RF.png]({{site.baseurl}}/images/Loan-Prediction-20-ConfusionMatrix_RF.png)]({{site.baseurl}}/images/Loan-Prediction-20-ConfusionMatrix_RF.png)
 
 
 
