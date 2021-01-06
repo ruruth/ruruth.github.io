@@ -364,8 +364,6 @@ def Evaluate_train_test_data(model, X, y):
 ### ROC Curve and AUC
 
 {% highlight python %}
-### ROC Curve and AUC
-
 def ROC_curve(model, x_train, x_test, y_train, y_test):
     # generate a no skill prediction (majority class)
     # My majority class here is "Loan_Status = 1" 
@@ -387,8 +385,6 @@ def ROC_curve(model, x_train, x_test, y_train, y_test):
 ### Precision-Recall Curve and F1 Score
 
 {% highlight python %}
-### Precision-Recall Curve and F1 Score
-
 def Precision_Recall_curve(model, x_train, x_test, y_train, y_test):
     # predict probabilities
     lr_probs = model.predict_proba(x_test)
@@ -417,8 +413,6 @@ def Precision_Recall_curve(model, x_train, x_test, y_train, y_test):
 ### Logistic Regression
 
 {% highlight python %}
-### Logistic Regression
-
 C = [100, 10, 1.0, 0.1, 0.01]
 penalty = ['none', 'l1', 'l2', 'elasticnet']
 solver = ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
@@ -477,8 +471,6 @@ for i in range(len(LR_params)):
 ### Decision Tree
 
 {% highlight python %}
-### Decision Tree
-
 criterion = ['gini', 'entropy']
 max_depth = list(range(1,5))
 min_samples_split = list(range(2,4))
@@ -540,8 +532,6 @@ for i in range(len(DT_params)):
 ### Random Forest
 
 {% highlight python %}
-### RandomForest
-
 # n_estimators = [100]
 # criterion = ['gini']
 # max_features = ['auto']
