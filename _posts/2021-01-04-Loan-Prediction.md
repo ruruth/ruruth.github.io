@@ -204,6 +204,21 @@ df['Self_Employed'] = df["Self_Employed"].fillna(df['Self_Employed'].mode()[0])
 df.isnull().sum()
 {% endhighlight %}
 
+    Loan_ID              0
+    Gender               0
+    Married              0
+    Dependents           0
+    Education            0
+    Self_Employed        0
+    ApplicantIncome      0
+    CoapplicantIncome    0
+    LoanAmount           0
+    Loan_Amount_Term     0
+    Credit_History       0
+    Property_Area        0
+    Loan_Status          0
+    dtype: int64
+
 ### Exploratory Data Analysis
 
 {% highlight python %}
