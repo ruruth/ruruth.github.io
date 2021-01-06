@@ -178,6 +178,8 @@ sns.countplot(df['Gender'])
 sns.countplot(df['Married'])
 {% endhighlight %}
 
+[![Loan-Prediction-02-Married.png]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)<br>
+
 {% highlight python %}
 sns.countplot(df['Dependents'])
 {% endhighlight %}
