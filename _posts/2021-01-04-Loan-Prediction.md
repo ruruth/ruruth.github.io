@@ -299,6 +299,8 @@ plt.figure(figsize=(15,10))
 sns.heatmap(corr, annot = True, cmap="BuPu")
 {% endhighlight %}
 
+[![Loan-Prediction-17-Heatmap.png]({{site.baseurl}}/images/Loan-Prediction-17-Heatmap.png)]({{site.baseurl}}/images/Loan-Prediction-17-Heatmap.png)
+
 ### Attributes for Logistic Regression
 
 {% highlight python %}
