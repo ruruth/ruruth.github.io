@@ -380,8 +380,6 @@ def ROC_curve(model, x_train, x_test, y_train, y_test):
     ns_auc = roc_auc_score(y_test, ns_probs)
     lr_auc = roc_auc_score(y_test, lr_probs)
     # summarize scores
-#     print('No Skill: ROC AUC=%.3f' % (ns_auc))
-#     print('Model: ROC AUC=%.3f' % (lr_auc))
 
     return lr_auc
 {% endhighlight %}
@@ -402,7 +400,7 @@ def Precision_Recall_curve(model, x_train, x_test, y_train, y_test):
     # calculate f1 score and Precision-Recall auc
     lr_f1, lr_auc = f1_score(y_test, y_test_pred), auc(lr_recall, lr_precision)
     # summarize scores
-#     print('Logistic: f1=%.3f PR_AUC=%.3f' % (lr_f1, lr_auc))
+
     # plot the precision-recall curves
     # calculate the [true positive rate] precision/recall for no skill model
     no_skill = len(y_test[y_test==1]) / len(y_test)  # <-- 
@@ -411,10 +409,263 @@ def Precision_Recall_curve(model, x_train, x_test, y_train, y_test):
     pr_score_of_precision = precision_score(y_test, y_test_pred)
     # get recall score
     pr_score_of_recall = recall_score(y_test, y_test_pred)
-    
-#     print("score_of_precision:", pr_score_of_precision)
-#     print("score_of_recall:", pr_score_of_recall)
+
 
     return lr_f1, lr_auc, pr_score_of_precision, pr_score_of_recall
 {% endhighlight %}
+
+### Logistic Regression
+
+{% highlight python %}
+### Logistic Regression
+
+C = [100, 10, 1.0, 0.1, 0.01]
+penalty = ['none', 'l1', 'l2', 'elasticnet']
+solver = ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+
+
+LR_params = [C, penalty, solver]
+LR_params = list(itertools.product(*LR_params))
+
+
+column_params = ["C", "penalty", "solver"]
+Accuracy_params = ["Test Data Accuracy", "Cross Validation (Training) Data Accuracy"]
+ROC_params = ["ROC_AUC"]
+Precision_recall_params = ["PR_F1", 'PR_AUC', "PR_Precision_score", "PR_Recall_score"]
+All_scores_params = Accuracy_params+ROC_params+Precision_recall_params+column_params
+
+LR_ValueError = pd.DataFrame(columns = column_params)
+LR_Accuracy = pd.DataFrame(columns = All_scores_params)
+
+for i in range(len(LR_params)):
+    try:
+        
+        model = LogisticRegression(C=LR_params[i][0], penalty=LR_params[i][1], solver=LR_params[i][2])
+        
+        test_data_accuracy, cross_validation_training_data_accuracy, x_train, x_test, y_train, y_test = Evaluate_train_test_data(model, X, y)
+        
+        # Call ROC_curve
+        roc_auc = ROC_curve(model, x_train, x_test, y_train, y_test)
+
+        # Call Precision_Recall_curve
+        pr_f1, pr_auc, pr_score_of_precision, pr_score_of_recall = Precision_Recall_curve(model, x_train, x_test, y_train, y_test)
+
+        lis_Accuracy = [test_data_accuracy, 
+                        cross_validation_training_data_accuracy,
+                        roc_auc,
+                        pr_f1,
+                        pr_auc, 
+                        pr_score_of_precision, 
+                        pr_score_of_recall,
+                        LR_params[i][0],
+                        LR_params[i][1],
+                        LR_params[i][2]
+                       ]
+        
+        LR_Accuracy = LR_Accuracy.append(pd.DataFrame([lis_Accuracy], columns=All_scores_params), ignore_index=True)
+        
+    except:
+        
+        ValueError_params = [LR_params[i][0],
+                             LR_params[i][1],
+                             LR_params[i][2]
+                            ]
+        
+        LR_ValueError = LR_ValueError.append(pd.DataFrame([ValueError_params], columns=column_params), ignore_index=True)
+{% endhighlight %}
+
+### Decision Tree
+
+{% highlight python %}
+### Decision Tree
+
+criterion = ['gini', 'entropy']
+max_depth = list(range(1,5))
+min_samples_split = list(range(2,4))
+min_samples_leaf = list(range(1,5))
+
+DT_params = [criterion, max_depth, min_samples_split, min_samples_leaf]
+DT_params = list(itertools.product(*DT_params))
+
+
+column_params = ["criterion", "max_depth", "min_samples_split", "min_samples_leaf"]
+Accuracy_params = ["Test Data Accuracy", "Cross Validation (Training) Data Accuracy"]
+ROC_params = ["ROC_AUC"]
+Precision_recall_params = ["PR_F1", 'PR_AUC', "PR_Precision_score", "PR_Recall_score"]
+All_scores_params = Accuracy_params+ROC_params+Precision_recall_params+column_params
+
+DT_ValueError = pd.DataFrame(columns = column_params)
+DT_Accuracy = pd.DataFrame(columns = All_scores_params)
+
+for i in range(len(DT_params)):
+    try:
+        
+        model = DecisionTreeClassifier(criterion=DT_params[i][0], max_depth=DT_params[i][1], min_samples_split=DT_params[i][2], 
+                                       min_samples_leaf= DT_params[i][3])
+        
+        test_data_accuracy, cross_validation_training_data_accuracy, x_train, x_test, y_train, y_test = Evaluate_train_test_data(model, X_nonlog, y_nonlog)
+        
+        # Call ROC_curve
+        roc_auc = ROC_curve(model, x_train, x_test, y_train, y_test)
+
+        # Call Precision_Recall_curve
+        pr_f1, pr_auc, pr_score_of_precision, pr_score_of_recall = Precision_Recall_curve(model, x_train, x_test, y_train, y_test)
+
+        lis_Accuracy = [test_data_accuracy, 
+                        cross_validation_training_data_accuracy,
+                        roc_auc,
+                        pr_f1,
+                        pr_auc, 
+                        pr_score_of_precision, 
+                        pr_score_of_recall,
+                        DT_params[i][0],
+                        DT_params[i][1],
+                        DT_params[i][2],
+                        DT_params[i][3]
+                       ]
+        
+        DT_Accuracy = DT_Accuracy.append(pd.DataFrame([lis_Accuracy], columns=All_scores_params), ignore_index=True)
+        
+    except:
+        
+        ValueError_params = [DT_params[i][0],
+                        DT_params[i][1],
+                        DT_params[i][2],
+                        DT_params[i][3]
+                            ]
+        
+        DT_ValueError = DT_ValueError.append(pd.DataFrame([ValueError_params], columns=column_params), ignore_index=True)
+{% endhighlight %}
+
+### Random Forest
+
+{% highlight python %}
+### RandomForest
+
+# n_estimators = [100]
+# criterion = ['gini']
+# max_features = ['auto']
+
+n_estimators = [100, 200, 500]
+criterion = ['gini', 'entropy']
+max_features = ['auto','sqrt','log2']
+max_depth = [5]
+min_samples_split = [30, 60]    # [0.1*len(x_train)]
+min_samples_leaf = [10, 20]  # do not overfit the model
+
+
+RF_params = [n_estimators, criterion, max_features, max_depth, min_samples_split, min_samples_leaf]
+RF_params = list(itertools.product(*RF_params))
+
+
+column_params = ["n_estimators", "criterion", "max_features", "max_depth", "min_samples_split", "min_samples_leaf"]
+Accuracy_params = ["Test Data Accuracy", "Cross Validation (Training) Data Accuracy"]
+ROC_params = ["ROC_AUC"]
+Precision_recall_params = ["PR_F1", 'PR_AUC', "PR_Precision_score", "PR_Recall_score"]
+All_scores_params = Accuracy_params+ROC_params+Precision_recall_params+column_params
+
+RF_ValueError = pd.DataFrame(columns = column_params)
+RF_Accuracy = pd.DataFrame(columns = All_scores_params)
+
+for i in range(len(RF_params)):
+    try:
+        
+        model = RandomForestClassifier(n_estimators=RF_params[i][0], criterion=RF_params[i][1], max_features=RF_params[i][2], max_depth=RF_params[i][3], min_samples_split=RF_params[i][4], min_samples_leaf=RF_params[i][5])
+        
+        test_data_accuracy, cross_validation_training_data_accuracy, x_train, x_test, y_train, y_test = Evaluate_train_test_data(model, X_nonlog, y_nonlog)
+        
+        # Call ROC_curve
+        roc_auc = ROC_curve(model, x_train, x_test, y_train, y_test)
+
+        # Call Precision_Recall_curve
+        pr_f1, pr_auc, pr_score_of_precision, pr_score_of_recall = Precision_Recall_curve(model, x_train, x_test, y_train, y_test)
+
+        lis_Accuracy = [test_data_accuracy, 
+                        cross_validation_training_data_accuracy,
+                        roc_auc,
+                        pr_f1,
+                        pr_auc, 
+                        pr_score_of_precision, 
+                        pr_score_of_recall,
+                        RF_params[i][0],
+                        RF_params[i][1],
+                        RF_params[i][2],
+                        RF_params[i][3],
+                        RF_params[i][4],
+                        RF_params[i][5]
+                       ]
+        
+        RF_Accuracy = RF_Accuracy.append(pd.DataFrame([lis_Accuracy], columns=All_scores_params), ignore_index=True)
+        
+    except:
+        
+        ValueError_params = [RF_params[i][0],
+                             RF_params[i][1],
+                             RF_params[i][2],
+                             RF_params[i][3],
+                             RF_params[i][4],
+                             RF_params[i][5]
+                            ]
+        
+        RF_ValueError = RF_ValueError.append(pd.DataFrame([ValueError_params], columns=column_params), ignore_index=True)
+{% endhighlight %}
+
+### Output to an Excel File
+
+{% highlight python %}
+with pd.ExcelWriter('results.xlsx') as writer:
+    LR_ValueError.to_excel(writer, index = False, sheet_name='LR_ValueError')
+    LR_Accuracy.to_excel(writer, index = False, sheet_name='LR_Accuracy')
+    DT_ValueError.to_excel(writer, index = False, sheet_name='DT_ValueError')
+    DT_Accuracy.to_excel(writer, index = False, sheet_name='DT_Accuracy')
+    RF_ValueError.to_excel(writer, index = False, sheet_name='RF_ValueError')
+    RF_Accuracy.to_excel(writer, index = False, sheet_name='RF_Accuracy')
+{% endhighlight %}
+
+### Confusion Matrix
+
+{% highlight python %}
+# Logistic Regression Confusion Matrix
+
+model = LogisticRegression()
+model.fit(x_train, y_train)
+
+# Create a Confusion Matrix
+y_pred = model.predict(x_test)
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+sns.heatmap(cm, annot=True)
+{% endhighlight %}
+
+{% highlight python %}
+# Decision Tree Confusion Matrix
+
+model = DecisionTreeClassifier()
+model.fit(x_train, y_train)
+
+# Create a Confusion Matrix
+y_pred = model.predict(x_test)
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+sns.heatmap(cm, annot=True)
+{% endhighlight %}
+
+{% highlight python %}
+# Random Forest Confusion Matrix
+
+model = RandomForestClassifier()
+model.fit(x_train, y_train)
+
+# Create a Confusion Matrix
+y_pred = model.predict(x_test)
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+sns.heatmap(cm, annot=True)
+{% endhighlight %}
+
+
+
 
