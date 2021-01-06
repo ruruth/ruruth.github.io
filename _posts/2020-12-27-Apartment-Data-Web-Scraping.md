@@ -83,7 +83,7 @@ for i in range (1,5):
     price_tags = posts.select(".prices")
     price = [pt.get_text() for pt in price_tags]
     
-    # Converts lists to DataFrame.
+    # Convert lists to DataFrame.
     df = pd.DataFrame({
         "name":name,
         "address":address,
