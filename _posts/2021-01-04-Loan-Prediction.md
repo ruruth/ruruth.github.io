@@ -344,7 +344,7 @@ y_nonlog = df_nonlog['Loan_Status']
 {% endhighlight %}
 
 ### Hyperparameter Tuning (Grid Search)
-I took reference from [Jason Brownlee](https://machinelearningmastery.com/hyperparameters-for-classification-machine-learning-algorithms/)'s code and modified the code to become mine.
+I took reference from [Jason Brownlee](https://machinelearningmastery.com/hyperparameters-for-classification-machine-learning-algorithms/)'s code, and modified the code to become mine.
 
 {% highlight python %}
 df_all = df
