@@ -304,6 +304,10 @@ for col in cols:
 {% endhighlight %}
 
 {% highlight python %}
+df.head()
+{% endhighlight %}
+
+{% highlight python %}
 df.shape
 {% endhighlight %}
 
