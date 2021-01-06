@@ -172,13 +172,13 @@ df.isnull().sum()
 sns.countplot(df['Gender'])
 {% endhighlight %}
 
-[![Loan-Prediction-01-Gender.png]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)<br>
+[![Loan-Prediction-01-Gender.png]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)
 
 {% highlight python %}
 sns.countplot(df['Married'])
 {% endhighlight %}
 
-[![Loan-Prediction-02-Married.png]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)<br>
+[![Loan-Prediction-02-Married.png]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)]({{site.baseurl}}/images/Loan-Prediction-02-Married.png)
 
 {% highlight python %}
 sns.countplot(df['Dependents'])
