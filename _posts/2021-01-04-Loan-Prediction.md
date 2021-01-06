@@ -76,6 +76,8 @@ Company wants to automate the loan eligibility process (real time) based on cust
     </tbody>
 </table>
 
+First, we look at how the data looks like.<br>
+
 ### Import Modules
 
 {% highlight python %}
