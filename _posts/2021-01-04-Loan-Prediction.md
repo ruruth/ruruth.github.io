@@ -420,6 +420,9 @@ df_nonlog.head()
 df_nonlog.shape
 {% endhighlight %}
 
+    (614, 13)
+
+
 ### Preparation for Train-Test Split
 
 {% highlight python %}
