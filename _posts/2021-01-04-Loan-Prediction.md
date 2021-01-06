@@ -8,7 +8,8 @@ published: true
    }
 </style>
 
-_This practice problem is from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/#About). I took a reference from Jason Brownlee's article: [How to Use ROC Curves and Precision-Recall Curves for Classification](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/) for plotting ROC curves, Precision-Recall Curves, calculating AUC, F1 score. The programming language is Python._<br>
+_This practice problem is from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/#About). I took a reference from Jason Brownlee's article: [How to Use ROC Curves and Precision-Recall Curves for Classification](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/) for plotting ROC curves, Precision-Recall Curves, calculating AUC, F1 score.<br>
+The programming language is Python._<br>
 ---------<br>
 ### Predict Loan Eligibility for Dream Housing Finance Company<br>
 Dream Housing Finance company deals in all kinds of home loans. They have presence across all urban, semi urban and rural areas. Customer first applies for home loan and after that company validates the customer eligibility for loan.<br><br>
