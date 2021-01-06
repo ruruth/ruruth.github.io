@@ -294,6 +294,7 @@ df_nonlog
 
 {% highlight python %}
 # for Logistic Regression
+
 cols = ['Gender',"Married","Education",'Self_Employed',"Property_Area","Loan_Status","Dependents"]
 le = LabelEncoder()
 # initialize the LabelEncoder
@@ -308,6 +309,7 @@ df.shape
 
 {% highlight python %}
 # for Decision Tree and Random Forest
+
 cols = ['Gender',"Married", "Dependents","Education",'Self_Employed',"Property_Area","Loan_Status"]
 le = LabelEncoder()
 # initialize the LabelEncoder
