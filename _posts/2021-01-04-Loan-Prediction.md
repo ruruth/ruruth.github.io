@@ -399,6 +399,8 @@ df.head()
 df.shape
 {% endhighlight %}
 
+    (614, 12)
+
 {% highlight python %}
 # for Decision Tree and Random Forest
 
