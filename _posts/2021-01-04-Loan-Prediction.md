@@ -227,13 +227,13 @@ sns.distplot(df["CoapplicantIncome"])
 sns.distplot(df["LoanAmount"])
 {% endhighlight %}
 
-[![Loan-Prediction-07-Loan-Status.png]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)
+[![Loan-Prediction-10-LoanAmount.png]({{site.baseurl}}/images/Loan-Prediction-10-LoanAmount.png)]({{site.baseurl}}/images/Loan-Prediction-10-LoanAmount.png)
 
 {% highlight python %}
 sns.distplot(df['Loan_Amount_Term'])
 {% endhighlight %}
 
-[![Loan-Prediction-07-Loan-Status.png]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)
+[![Loan-Prediction-11-Loan-Amount-Term.png]({{site.baseurl}}/images/Loan-Prediction-11-Loan-Amount-Term.png)]({{site.baseurl}}/images/Loan-Prediction-11-Loan-Amount-Term.png)
 
 {% highlight python %}
 sns.distplot(df['Credit_History'])
@@ -241,7 +241,7 @@ sns.distplot(df['Credit_History'])
 # Will not apply Log Transformation.
 {% endhighlight %}
 
-[![Loan-Prediction-07-Loan-Status.png]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)
+[![Loan-Prediction-12-Credit-History.png]({{site.baseurl}}/images/Loan-Prediction-12-Credit-History.png)]({{site.baseurl}}/images/Loan-Prediction-12-Credit-History.png)
 
 ### Creation of New Attributes
 
