@@ -343,7 +343,7 @@ X_nonlog = df_nonlog.drop(columns=['Loan_Status'], axis=1)
 y_nonlog = df_nonlog['Loan_Status']
 {% endhighlight %}
 
-From here on, I took reference from [Jason Brownlee](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/)'s code, and modified the code to become mine.
+I took reference from Jason Brownlee's article [_How to Use ROC Curves and Precision-Recall Curves for Classification_](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/), and modified the code to become mine.
 ### Hyperparameter Tuning (Grid Search)
 
 {% highlight python %}
