@@ -172,6 +172,8 @@ df.isnull().sum()
 sns.countplot(df['Gender'])
 {% endhighlight %}
 
+[![Loan-Prediction-01-Gender.png]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)]({{site.baseurl}}/images/Loan-Prediction-01-Gender.png)<br>
+
 {% highlight python %}
 sns.countplot(df['Married'])
 {% endhighlight %}
