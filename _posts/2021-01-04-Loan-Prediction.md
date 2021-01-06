@@ -364,10 +364,57 @@ def Evaluate_train_test_data(model, X, y):
 ### ROC Curve and AUC
 
 {% highlight python %}
-df_all = df
+### ROC Curve and AUC
+
+def ROC_curve(model, x_train, x_test, y_train, y_test):
+    # generate a no skill prediction (majority class)
+    # My majority class here is "Loan_Status = 1" 
+    ns_probs = [1 for _ in range(len(y_test))]
+    
+    # predict probabilities
+    lr_probs = model.predict_proba(x_test)
+    # keep probabilities for the positive outcome only
+
+    lr_probs = lr_probs[:, 1]
+    # calculate roc-auc scores for no-skill classifier and the trained model
+    ns_auc = roc_auc_score(y_test, ns_probs)
+    lr_auc = roc_auc_score(y_test, lr_probs)
+    # summarize scores
+#     print('No Skill: ROC AUC=%.3f' % (ns_auc))
+#     print('Model: ROC AUC=%.3f' % (lr_auc))
+
+    return lr_auc
 {% endhighlight %}
 
+### Precision-Recall Curve and F1 Score
+
 {% highlight python %}
-df_all = df
+### Precision-Recall Curve and F1 Score
+
+def Precision_Recall_curve(model, x_train, x_test, y_train, y_test):
+    # predict probabilities
+    lr_probs = model.predict_proba(x_test)
+    # keep probabilities for the positive outcome only
+    lr_probs = lr_probs[:, 1]
+    # predict class values
+    y_test_pred = model.predict(x_test)
+    lr_precision, lr_recall, _ = precision_recall_curve(y_test, lr_probs)
+    # calculate f1 score and Precision-Recall auc
+    lr_f1, lr_auc = f1_score(y_test, y_test_pred), auc(lr_recall, lr_precision)
+    # summarize scores
+#     print('Logistic: f1=%.3f PR_AUC=%.3f' % (lr_f1, lr_auc))
+    # plot the precision-recall curves
+    # calculate the [true positive rate] precision/recall for no skill model
+    no_skill = len(y_test[y_test==1]) / len(y_test)  # <-- 
+    
+    # get precision score
+    pr_score_of_precision = precision_score(y_test, y_test_pred)
+    # get recall score
+    pr_score_of_recall = recall_score(y_test, y_test_pred)
+    
+#     print("score_of_precision:", pr_score_of_precision)
+#     print("score_of_recall:", pr_score_of_recall)
+
+    return lr_f1, lr_auc, pr_score_of_precision, pr_score_of_recall
 {% endhighlight %}
 
