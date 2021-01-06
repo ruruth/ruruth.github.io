@@ -260,10 +260,14 @@ sns.distplot(df["ApplicantIncomeLog"])
 # ApplicationIncomeLog ranges between 5 to 12.
 {% endhighlight %}
 
+[![Loan-Prediction-13-ApplicantIncomeLog.png]({{site.baseurl}}/images/Loan-Prediction-13-ApplicantIncomeLog.png)]({{site.baseurl}}/images/Loan-Prediction-13-ApplicantIncomeLog.png)
+
 {% highlight python %}
 df['LoanAmountLog'] = np.log(df['LoanAmount'])
 sns.distplot(df["LoanAmountLog"])
 {% endhighlight %}
+
+[![Loan-Prediction-14-LoanAmountLog.png]({{site.baseurl}}/images/Loan-Prediction-14-LoanAmountLog.png)]({{site.baseurl}}/images/Loan-Prediction-14-LoanAmountLog.png)
 
 {% highlight python %}
 df['Loan_Amount_Term_Log'] = np.log(df['Loan_Amount_Term'])
@@ -272,10 +276,14 @@ sns.distplot(df["Loan_Amount_Term_Log"])
 # But the scale is changed from 0 to 500 to 0 to 6 which is still better than before log transformation.
 {% endhighlight %}
 
+[![Loan-Prediction-15-Loan-Amount-Term-Log.png]({{site.baseurl}}/images/Loan-Prediction-15-Loan-Amount-Term-Log.png)]({{site.baseurl}}/images/Loan-Prediction-15-Loan-Amount-Term-Log.png)
+
 {% highlight python %}
 df['Total_Income_Log'] = np.log(df['Total_Income'])
 sns.distplot(df["Total_Income_Log"])
 {% endhighlight %}
+
+[![Loan-Prediction-16-Total-Income-Log.png]({{site.baseurl}}/images/Loan-Prediction-16-Total-Income-Log.png)]({{site.baseurl}}/images/Loan-Prediction-16-Total-Income-Log.png)
 
 {% highlight python %}
 df.head()
