@@ -25,24 +25,23 @@ I look for prices by `class=`**`"prices"`**<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 ### Code<br>
 {% highlight python %}
+# Open the webpage that we are going to scrape.
 import webbrowser
 webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
-# Open the webpage that we are going to scrape.
 {% endhighlight %}
 
 {% highlight python %}
-import requests
 # The requests module allows you to send HTTP requests using Python.
 # The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
-    
-from bs4 import BeautifulSoup
+import requests
+
 # Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 # It creates a parse tree for parsed pages that can be used to extract data from HTML.
+from bs4 import BeautifulSoup
 
-import pandas as pd
 # Pandas is built on the Numpy package and its key data structure is called the DataFrame.
 # DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
-    
+import pandas as pd
     
 headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
 # The User-Agent request header is a characteristic string that lets servers and network peers 
