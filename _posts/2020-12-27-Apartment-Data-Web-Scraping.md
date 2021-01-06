@@ -24,13 +24,13 @@ I look for number of bedrooms by `class=`**`"bedrooms"`**<br>
 I look for prices by `class=`**`"prices"`**<br>
 [![prices.png]({{site.baseurl}}/images/prices.png)]({{site.baseurl}}/images/prices.png)<br>
 ### Code<br>
-{% highlight python linenos %}
+{% highlight python %}
     import webbrowser
     webbrowser.open_new('https://www.apartmenthomeliving.com/new-york-city-ny?page=')
     # Open the webpage that we are going to scrape.
 {% endhighlight %}
 
-{% highlight python linenos %}
+{% highlight python %}
     import requests
     # The requests module allows you to send HTTP requests using Python.
     # The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
