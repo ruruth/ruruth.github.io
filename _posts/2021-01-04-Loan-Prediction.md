@@ -202,9 +202,13 @@ sns.countplot(df['Self_Employed'])
 sns.countplot(df['Property_Area'])
 {% endhighlight %}
 
+[![Loan-Prediction-06-Property-Area.png]({{site.baseurl}}/images/Loan-Prediction-06-Property-Area.png)]({{site.baseurl}}/images/Loan-Prediction-06-Property-Area.png)
+
 {% highlight python %}
 sns.countplot(df['Loan_Status'])
 {% endhighlight %}
+
+[![Loan-Prediction-07-Loan-Status.png]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)]({{site.baseurl}}/images/Loan-Prediction-07-Loan-Status.png)
 
 {% highlight python %}
 # numerical attributes visualization
