@@ -78,7 +78,6 @@ Company wants to automate the loan eligibility process (real time) based on cust
 </table>
 
 ---------<br>
-
 ### Import Modules
 
 {% highlight python %}
