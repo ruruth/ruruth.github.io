@@ -128,7 +128,7 @@ df = pd.read_csv("Loan Prediction Dataset.csv")
 df.head()
 {% endhighlight %}
 
-<div> == $0
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
