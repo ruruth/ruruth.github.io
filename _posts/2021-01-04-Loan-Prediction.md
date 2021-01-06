@@ -346,15 +346,28 @@ y_nonlog = df_nonlog['Loan_Status']
 ### Hyperparameter Tuning (Grid Search)
 
 {% highlight python %}
-df_all = df
-{% endhighlight %}
+def Evaluate_train_test_data(model, X, y):
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.10, random_state=42)
+    model.fit(x_train, y_train)
+    # I want to compare the cross validation accuracy against the test data(which is only 10%) accuracy; hence I chose
+    # cv=9 (9 folds)
+    score = cross_val_score(model, x_train, y_train, cv=9)
+    
+    test_data_accuracy = model.score(x_test, y_test)*100
+    cross_validation_training_data_accuracy = np.mean(score)*100
 
-{% highlight python %}
-df_all = df
-{% endhighlight %}
-
-{% highlight python %}
-df_all = df
+    return test_data_accuracy, cross_validation_training_data_accuracy, x_train, x_test, y_train, y_test
 {% endhighlight %}
 
 I took a reference from Jason Brownlee's article [_How to Use ROC Curves and Precision-Recall Curves for Classification_](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/) for plotting ROC curves, Precision-Recall Curves, calculating AUC, F1 score.
+
+### ROC Curve and AUC
+
+{% highlight python %}
+df_all = df
+{% endhighlight %}
+
+{% highlight python %}
+df_all = df
+{% endhighlight %}
+
