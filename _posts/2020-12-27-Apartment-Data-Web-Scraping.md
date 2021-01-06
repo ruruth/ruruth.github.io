@@ -42,56 +42,58 @@ from bs4 import BeautifulSoup
 # Pandas is built on the Numpy package and its key data structure is called the DataFrame.
 # DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
 import pandas as pd
-    
-headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+
 # The User-Agent request header is a characteristic string that lets servers and network peers 
 # identify the application, operating system, vendor, and/or version of the requesting user agent.
 # Chrome: inspect --> network --> All --> website address --> Headers --> User-Agent
-    
+headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+
+# Create an empty DataFrame with column names.
 column_names = ["name", "address", "beds", "price"]
 house = pd.DataFrame(columns = column_names)
-# Create an empty DataFrame with column names.
-    
-for i in range (1,5):
+
 # From page 1 to 4.
+for i in range (1,5):
 
-    url = "https://www.apartmenthomeliving.com/new-york-city-ny?page="+str(i)
     # By observation, changes the page number in url changes to different page.
+    url = "https://www.apartmenthomeliving.com/new-york-city-ny?page="+str(i)
     
-    page = requests.get(url, headers=headers)
     # To get or retrieve data from the link, and send out the header to the website.
+    page = requests.get(url, headers=headers)
     
+    # Use BeautifulSoup to creates a parse tree.
     soup = BeautifulSoup(page.content, 'html.parser')
-    # Use BeautifulSoup to create a parse tree.
     
-    posts = soup.find(id = "property_list")
     # The value of the id attribute must be unique within the HTML document.
+    posts = soup.find(id = "property_list")
     
-    name_class = posts.select(".property_link")
-    # Soup.select method to look for all contents of class="property_link"
-    name = [nt.get_text() for nt in name_class]
     # Find all name on page i at one time.
+    name_tags = posts.select(".property_link")
+    name = [nt.get_text() for nt in name_tags]
     
-    address_class = posts.select(".address")
-    address = [at.get_text() for at in address_class]
-
-    beds_class = posts.select(".bedrooms")
-    beds = [pt.get_text() for pt in beds_class]
-
-    price_class = posts.select(".prices")
-    price = [pt.get_text() for pt in price_class]
+    # Find all address on page i at one time.
+    address_tags = posts.select(".address")
+    address = [at.get_text() for at in address_tags]
     
+    # Find all beds of the page i at one time.
+    beds_tags = posts.select(".bedrooms")
+    beds = [pt.get_text() for pt in beds_tags]
+    
+    # Find all price of the page i at one time.
+    price_tags = posts.select(".prices")
+    price = [pt.get_text() for pt in price_tags]
+    
+    # Converts lists to DataFrame.
     df = pd.DataFrame({
         "name":name,
         "address":address,
         "beds":beds,
         "price":price
-        })
-    # Converts lists to DataFrame.
+    })
     
+    # Append df to house.
     house = house.append(df, ignore_index=True)
-    # Append the DataFrame of page i to house
   
+# Output a csv file.
 house.to_csv('output.csv', mode='w')
-# Output a csv file. 
 {% endhighlight %}
