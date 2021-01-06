@@ -166,6 +166,21 @@ df.info()
 df.isnull().sum()
 {% endhighlight %}
 
+    Loan_ID               0
+    Gender               13
+    Married               3
+    Dependents           15
+    Education             0
+    Self_Employed        32
+    ApplicantIncome       0
+    CoapplicantIncome     0
+    LoanAmount           22
+    Loan_Amount_Term     14
+    Credit_History       50
+    Property_Area         0
+    Loan_Status           0
+    dtype: int64
+
 {% highlight python %}
 # Fill the missing values for numerical terms - mean.
 # Mean vs median (better to choose median).
