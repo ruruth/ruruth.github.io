@@ -136,6 +136,29 @@ df.describe()
 df.info()
 {% endhighlight %}
 
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 614 entries, 0 to 613
+    Data columns (total 13 columns):
+     #   Column             Non-Null Count  Dtype  
+    ---  ------             --------------  -----  
+     0   Loan_ID            614 non-null    object 
+     1   Gender             601 non-null    object 
+     2   Married            611 non-null    object 
+     3   Dependents         599 non-null    object 
+     4   Education          614 non-null    object 
+     5   Self_Employed      582 non-null    object 
+     6   ApplicantIncome    614 non-null    int64  
+     7   CoapplicantIncome  614 non-null    float64
+     8   LoanAmount         592 non-null    float64
+     9   Loan_Amount_Term   600 non-null    float64
+     10  Credit_History     564 non-null    float64
+     11  Property_Area      614 non-null    object 
+     12  Loan_Status        614 non-null    object 
+    dtypes: float64(4), int64(1), object(8)
+    memory usage: 62.5+ KB
+
+
 ### Preprocessing the Dataset
 
 {% highlight python %}
