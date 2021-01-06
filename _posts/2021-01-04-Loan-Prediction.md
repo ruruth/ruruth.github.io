@@ -290,11 +290,9 @@ df_nonlog = df_all[['Gender','Married','Dependents', 'Education', 'Self_Employed
 df_nonlog
 {% endhighlight %}
 
-### Label Encoding
+### Label Encoding for Logistic Regression
 
 {% highlight python %}
-# for Logistic Regression
-
 cols = ['Gender',"Married","Education",'Self_Employed',"Property_Area","Loan_Status","Dependents"]
 le = LabelEncoder()
 # initialize the LabelEncoder
@@ -307,9 +305,9 @@ for col in cols:
 df.shape
 {% endhighlight %}
 
-{% highlight python %}
-# for Decision Tree and Random Forest
+# Lable Encoding for Decision Tree and Random Forest
 
+{% highlight python %}
 cols = ['Gender',"Married", "Dependents","Education",'Self_Employed',"Property_Area","Loan_Status"]
 le = LabelEncoder()
 # initialize the LabelEncoder
