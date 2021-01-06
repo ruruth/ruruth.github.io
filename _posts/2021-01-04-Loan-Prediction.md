@@ -190,9 +190,13 @@ sns.countplot(df['Dependents'])
 sns.countplot(df['Education'])
 {% endhighlight %}
 
+[![Loan-Prediction-04-Education.png]({{site.baseurl}}/images/Loan-Prediction-04-Education.png)]({{site.baseurl}}/images/Loan-Prediction-04-Education.png)
+
 {% highlight python %}
 sns.countplot(df['Self_Employed'])
 {% endhighlight %}
+
+[![Loan-Prediction-05-Self-Employed.png]({{site.baseurl}}/images/Loan-Prediction-05-Self-Employed.png)]({{site.baseurl}}/images/Loan-Prediction-05-Self-Employed.png)
 
 {% highlight python %}
 sns.countplot(df['Property_Area'])
