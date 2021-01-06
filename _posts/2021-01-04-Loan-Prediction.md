@@ -724,6 +724,15 @@ print(cm)
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
 
+    [[ 7 14]
+     [ 1 40]]
+
+
+
+
+
+    <AxesSubplot:>
+
 [![Loan-Prediction-18-ConfusionMatrix_LR.png]({{site.baseurl}}/images/Loan-Prediction-18-ConfusionMatrix_LR.png)]({{site.baseurl}}/images/Loan-Prediction-18-ConfusionMatrix_LR.png)
 
 {% highlight python %}
@@ -740,6 +749,15 @@ print(cm)
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
 
+    [[10 11]
+     [ 8 33]]
+
+
+
+
+
+    <AxesSubplot:>
+
 [![Loan-Prediction-19-ConfusionMatrix_DT.png]({{site.baseurl}}/images/Loan-Prediction-19-ConfusionMatrix_DT.png)]({{site.baseurl}}/images/Loan-Prediction-19-ConfusionMatrix_DT.png)
 
 {% highlight python %}
@@ -755,5 +773,14 @@ print(cm)
 
 sns.heatmap(cm, annot=True)
 {% endhighlight %}
+
+    [[ 7 14]
+     [ 2 39]]
+
+
+
+
+
+    <AxesSubplot:>
 
 [![Loan-Prediction-20-ConfusionMatrix_RF.png]({{site.baseurl}}/images/Loan-Prediction-20-ConfusionMatrix_RF.png)]({{site.baseurl}}/images/Loan-Prediction-20-ConfusionMatrix_RF.png)
