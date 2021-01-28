@@ -1,8 +1,17 @@
 ---
 published: true
 ---
+<style>
+   img {
+       display: block;
+       margin: auto;
+   }
+</style>
 
-<!DOCTYPE html>
+_This practice problem is from <a href="https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv" target="_blank" style="color:blue">Kaggle</a>.
+The programming language is Python._<br>
+---------<br>
+
 <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16628,4 +16637,3 @@ Name: 14, dtype: object</pre>
 
 
 </html>
-
