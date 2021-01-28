@@ -8,7 +8,7 @@ published: true
    }
 </style>
 
-_This practice problem is from <a href="https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv" target="_blank" style="color:blue">Kaggle</a>.<br>
+_This practice problem is from <a href="https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv" target="_blank" style="color:blue">World Happiness Report</a> from Kaggle.<br>
 The programming language is Python._<br>
 ---------<br>
 
